@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Home Route
 @app.route('/')
-def hello_world():
+def serve():
     return render_template('index.html')
  
 # main driver function
