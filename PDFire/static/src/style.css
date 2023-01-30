@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+input::file-selector-button{
+    cursor: pointer;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+    border-radius: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight:700;
+    color: black;
+    background-color: white;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
