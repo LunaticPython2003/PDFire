@@ -1,4 +1,4 @@
-# pdfire
+# pdfire (Work in Progress)
 A PDF Converter (Flask-App)
 
 To start devlopment server 
@@ -18,3 +18,6 @@ python -m flask --app main --debug run
 
 USE FLAG -p 3000 for PORT
 ````
+ ## TODO
+- [ ] Creating the output route 
+- [ ] Automating the project
