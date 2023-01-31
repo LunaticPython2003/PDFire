@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import request
 from flask import render_template
+import test
+import os
 
 app = Flask(__name__)
 
@@ -11,9 +13,11 @@ def serve():
 
 @app.route('/convert', methods = ['POST'])
 def convertToPdf():
-    result = request.files
-    print(result)
-    return render_template('output.html')
+    files = request.files.getlist("files")
+    for file in files:
+        file.save(os.path.join('UPLOADS', file.filename))
+    # test.Hello()    For debug
+    return render_template("output.html")
 
 
 # main driver function
