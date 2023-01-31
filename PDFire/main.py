@@ -22,6 +22,7 @@ def convertToPdf():
     for file in files:
         file.save(os.path.join('UPLOADS', file.filename))
     os.chdir("UPLOADS")
+    pdfy.pdf()
     return render_template("output.html")
 
 
