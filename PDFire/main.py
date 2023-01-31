@@ -1,8 +1,8 @@
-from flask import Flask
-from flask import request
-from flask import render_template
+from flask import Flask, request, render_template
 import test
+import shutil
 import os
+import pdfy
 
 app = Flask(__name__)
 
@@ -13,10 +13,15 @@ def serve():
 
 @app.route('/convert', methods = ['POST'])
 def convertToPdf():
+    if os.path.exists("UPLOADS"):
+        shutil.rmtree("UPLOADS")
+        os.mkdir("UPLOADS")
+    else:
+        os.mkdir("UPLOADS")
     files = request.files.getlist("files")
     for file in files:
         file.save(os.path.join('UPLOADS', file.filename))
-    # test.Hello()    For debug
+    os.chdir("UPLOADS")
     return render_template("output.html")
 
 
