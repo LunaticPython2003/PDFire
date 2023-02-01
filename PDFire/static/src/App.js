@@ -38,3 +38,12 @@
         }
     }
 });
+
+
+// Event handling for Success message on submit
+var Alert = document.getElementById("alert");
+var close = document.getElementById("close-modal");
+Alert.style.transform = "translateY(0%)";
+function closeAlert() {
+  Alert.style.transform = "translateY(-200%)";
+}
