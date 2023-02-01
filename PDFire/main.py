@@ -13,15 +13,15 @@ def serve():
 
 @app.route('/convert', methods = ['POST'])
 def convertToPdf():
-    if os.path.exists("UPLOADS"):
-        shutil.rmtree("UPLOADS")
-        os.mkdir("UPLOADS")
+    if os.path.exists("static/UPLOADS"):
+        shutil.rmtree("static/UPLOADS")
+        os.mkdir("static/UPLOADS")
     else:
-        os.mkdir("UPLOADS")
+        os.mkdir("static/UPLOADS")
     files = request.files.getlist("files")
     for file in files:
-        file.save(os.path.join('UPLOADS', file.filename))
-    os.chdir("UPLOADS")
+        file.save(os.path.join('static/UPLOADS', file.filename))
+    os.chdir("static/UPLOADS")
     pdfy.pdf()
     return render_template("output.html")
 
