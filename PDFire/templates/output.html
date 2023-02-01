@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Converted PDF</title>
-</head>
-<body>
-    Received your PDF files
-</body>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/main.css')}}"
+    />
+    <link rel="icon" href="../static/assets/favicon.ico" />
+    <link rel="stylesheet" href="../static/src/style.css">
+  </head>
+  <body>
+    <div class="flex items-center justify-center px-4">
+      <div
+        role="alert"
+        id="alert"
+        class="transition duration-150 ease-in-out w-full lg:w-11/12 mx-auto bg-white dark:bg-white shadow rounded flex flex-col py-4 md:py-0 items-center md:flex-row justify-between"
+      >
+        <div class="flex flex-col items-center md:flex-row">
+          <div
+            class="mr-3 p-4 bg-green-400 rounded md:rounded-tr-none md:rounded-br-none text-black"
+          >
+            <img
+              class="focus:outline-none"
+              src="../static/assets/success.png"
+              alt="warning"
+              id="success"
+            />
+          </div>
+          <p
+            class="mr-2 text-base font-bold text-gray-800 dark:text-black mt-2 md:my-0"
+          >
+            Success
+          </p>
+          <div
+            class="h-1 w-1 bg-gray-300 dark:bg-gray-700 rounded-full mr-2 hidden xl:block"
+          ></div>
+          <p
+            class="text-sm lg:text-base dark:text-black text-black lg:pt-1 xl:pt-0 sm:mb-0 mb-2 text-center sm:text-left"
+          >
+            Image files converted to PDF. Thank you for using our App &#10084
+          </p>
+        </div>
+        <div
+          class="flex xl:items-center lg:items-center sm:justify-end justify-center pr-4"
+        >
+          <button
+            class="focus:outline-none focus:text-gray-700 hover:text-black text-sm cursor-pointer text-gray-700 dark:text-gray-700"
+            onclick="closeAlert()"
+          >
+            Dismiss
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="frame mt-4">
+
+        <embed
+        src="{{url_for('static',filename='./uploads/output.pdf')}}"
+        frameBorder="0"
+        scrolling="auto"
+        height="620px"
+        width="100%"
+        ></embed>
+    </div>
+    <div class="flex mt-2 mb-3" id="btn">
+        <button type="button" id="submit_button" class="peer hidden"></button>
+        <label for="submit_button" class="select-none cursor-pointer rounded-lg border-2
+         py-3 px-6 font-bold text-black transition-colors duration-200 ease-in-out hover:text-black border-blue-500 hover:border-transparent hover:bg-blue-600 hover:text-white"><a href="{{url_for('static',filename='./uploads/output.pdf')}}" download>Download</a></label>
+      </div>
+    
+    <script src="../static/src/App.js"></script>
 </html>

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    overflow: hidden;
+}
 
 input::file-selector-button{
     cursor: pointer;
@@ -20,4 +23,9 @@ input::file-selector-button{
 
 #success{
     height: 20px;
+}
+
+#btn{
+    align-items: center;
+    justify-content: center;
 }
