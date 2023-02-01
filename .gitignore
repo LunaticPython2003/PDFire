@@ -130,3 +130,6 @@ dmypy.json
 
 # Node-Modules
 node_modules
+
+# Added UPLOADS 
+UPLOADS
