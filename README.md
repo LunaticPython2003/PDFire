@@ -2,6 +2,8 @@
 
 A web application to convert image files to PDFs using Flask as the backend and Tailwind CSS as the frontend.
 
+## [Click Here to View Deployment](https://pdfire.onrender.com)
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -16,14 +18,15 @@ Clone the repository and install the required packages.
 
 ```bash
 git clone https://github.com/LunaticPython2003/PDFire.git
-cd image-
+cd PDFire
 pip install -r requirements.txt
 ```
 ## Start the Flask development server.
 
-In the root directory run the following commands
+In the root directory run the following commands in UNIX shell 
+**(Gunicorn doesn't run on Windows. It's very design is to take 'advantage of features in Unix/Unix-like kernels')**
 ```
-python3 -m PDFire
+gunicorn wsgi:app
 ```
 Open your browser and go to http://localhost:5000 to view the app.
 
