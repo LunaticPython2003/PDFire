@@ -25,7 +25,7 @@ def convertToPdf():
     if os.path.exists('static/UPLOADS/output.pdf'):
         return render_template("output.html")
     else:
-        return '<html><body><h1>Hello World</h1></body></html>'
+        return '<html><body><h1>Sorry we are down. Please Contact Us.</h1></body></html>'
 
 
 # main driver function
