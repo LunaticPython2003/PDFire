@@ -22,7 +22,10 @@ def convertToPdf():
         file.save(os.path.join('static/UPLOADS', file.filename))
     os.chdir("static/UPLOADS")
     pdfy.pdf()
-    return render_template("output.html")
+    if os.path.exists('static/UPLOADS/output.pdf'):
+        return render_template("output.html")
+    else:
+        return '<html><body><h1>Hello World</h1></body></html>'
 
 
 # main driver function
