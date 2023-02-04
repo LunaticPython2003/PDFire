@@ -21,14 +21,22 @@ git clone https://github.com/LunaticPython2003/PDFire.git
 cd PDFire
 pip install -r requirements.txt
 ```
-## Start the Flask development server.
+## Start the production server.
 
-In the root directory run the following commands in UNIX shell 
+To run in production environment (or deploy in your server), in the root directory run the following commands in UNIX shell 
 **(Gunicorn doesn't run on Windows. It's very design is to take 'advantage of features in Unix/Unix-like kernels')**
 ```
 gunicorn wsgi:app
 ```
 Open your browser and go to http://localhost:5000 to view the app.
+
+## Start the Flask development server
+
+To run the development server, in the root directory, run the following command in your terminal
+
+```
+python -m flask --app main run
+```
 
 ## Dependencies
 
