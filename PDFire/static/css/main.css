@@ -975,6 +975,21 @@ input::file-selector-button{
   justify-content: center;
 }
 
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: 600;
+  padding: .7rem;
+  width: 100%;
+  z-index: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: center;
+}
+
 @media (max-width: 1281px) 
 {
   embed {
