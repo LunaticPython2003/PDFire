@@ -3,9 +3,12 @@ name = "PDFire"
 version = "0.1.0"
 description = "A web application to convert image files to PDFs using Flask as the backend and Tailwind CSS as the frontend."
 authors = [
+    "Madhurjya Dasgupta <lunaticpython2003@users.noreply.github.com>",
     "Pooranjoy Bhattacharya <pooranjoyb2016@gmail.com>",
 ]
-maintainers = []
+maintainers = [
+    "Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",
+]
 license = "GPL-3.0-or-later"
 
 [tool.poetry.dependencies]
