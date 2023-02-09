@@ -3,7 +3,7 @@ name = "PDFire"
 version = "0.1.0"
 description = "A web application to convert image files to PDFs using Flask as the backend and Tailwind CSS as the frontend."
 authors = [
-    "Madhurjya Dasgupta <lunaticpython2003@users.noreply.github.com>",
+    "Madhurjya Dasgupta <madhurjya2003@icloud.com>",
     "Pooranjoy Bhattacharya <pooranjoyb2016@gmail.com>",
 ]
 maintainers = [

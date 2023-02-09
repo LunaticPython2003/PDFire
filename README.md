@@ -56,15 +56,17 @@ python -m flask --app main run
 - [Tailwind CSS](https://tailwindcss.com/) - The CSS framework used for the frontend
 - [Python](https://www.python.org/) - The programming language used
 
+
 ## Contributing
 
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Authors
 
 Madhurjya Dasgupta & Pooranjoy Bhattacharya
 
 See also the list of contributors who participated in this project.
+
+- Lari Liuhamo [Github](https://github.com/Diapolo10) 
 
 ## License
 
