@@ -132,4 +132,7 @@ dmypy.json
 node_modules
 
 # Added UPLOADS 
-UPLOADS
+dynamic/
+
+# Snyk
+.dccache
