@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 input::file-selector-button{
