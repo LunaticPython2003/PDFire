@@ -18,6 +18,12 @@ def serve():
 
     return render_template('index.html')
 
+# Team Route
+@app.route('/team')
+def serveTeamPage():
+    """Team page"""
+
+    return render_template('team.html')
 
 @app.route('/convert', methods = ['POST'])
 def convert_to_pdf():
@@ -53,4 +59,4 @@ def download_pdf(pdf_name):
 
 # main driver function
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
