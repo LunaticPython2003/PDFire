@@ -25,6 +25,13 @@ def serveTeamPage():
 
     return render_template('team.html')
 
+# Contact Route
+@app.route('/contact')
+def serveContactPage():
+    """Contact page"""
+
+    return render_template('contact.html')
+
 @app.route('/convert', methods = ['POST'])
 def convert_to_pdf():
     """Route handling file uploads"""
